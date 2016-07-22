@@ -26,6 +26,7 @@ public class DemoConfiguration {
     }
 
     @Bean
+    @Primary
     public LocalContainerEntityManagerFactoryBean petsEntityManagerFactory(
             EntityManagerFactoryBuilder builder) {
         return builder
