@@ -4,6 +4,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
-@EnableJpaRepositories(basePackageClasses = Dog.class, entityManagerFactoryRef = "petsEntityManagerFactory")
+@EnableJpaRepositories(
+        basePackages = "com.example.pets",
+        entityManagerFactoryRef = "petsEntityManagerFactory",
+        transactionManagerRef = "petsTransactionManager"
+)
 public class PetsConfiguration {
 }

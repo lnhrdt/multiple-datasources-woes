@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.pets.Cat;
+import com.example.pets.CatRepository;
 import com.example.pets.Dog;
 import com.example.pets.DogRepository;
 import com.example.plants.Fern;
@@ -18,6 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ThingsWorkTest {
 
 	@Autowired DogRepository dogRepository;
+	@Autowired CatRepository catRepository;
 	@Autowired FernRepository fernRepository;
 
 	@Test
@@ -25,6 +28,13 @@ public class ThingsWorkTest {
 		assertThat(dogRepository.count()).isEqualTo(0);
 		dogRepository.save(new Dog());
 		assertThat(dogRepository.count()).isEqualTo(1);
+	}
+
+	@Test
+	public void moarCatsPls() {
+		assertThat(catRepository.count()).isEqualTo(0);
+		catRepository.save(new Cat());
+		assertThat(catRepository.count()).isEqualTo(1);
 	}
 
 	@Test

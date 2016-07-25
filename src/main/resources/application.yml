@@ -1,13 +1,9 @@
 datasource:
   pets:
     url: "jdbc:h2:mem:pets"
+    jpa:
+      properties.hibernate.hbm2ddl.auto: create-drop
   plants:
     url: "jdbc:h2:mem:plants"
-#spring:
-#  datasource:
-#    url: "jdbc:h2:mem:pets"
-
-spring.jpa.hibernate.ddl-auto: create-drop
-spring.jpa.hibernate.naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
-spring.jpa.database: H2
-spring.jpa.show-sql: true
+    jpa:
+      properties.hibernate.hbm2ddl.auto: create-drop
