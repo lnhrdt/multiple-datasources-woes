@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         entityManagerFactoryRef = "petsEntityManagerFactory",
         transactionManagerRef = "petsTransactionManager"
 )
-public class PetsConfiguration {
+public class PetsDatabaseConfiguration {
 }
