@@ -68,7 +68,7 @@ public class DemoConfiguration {
             JpaProperties plantsJpaProperties) {
         EntityManagerFactoryBuilder builder = createEntityManagerFactoryBuilder(plantsJpaProperties);
         return builder
-                .dataSource(petsDataSource())
+                .dataSource(plantsDataSource())
                 .packages("com.example.plants")
                 .persistenceUnit("plants")
                 .build();
