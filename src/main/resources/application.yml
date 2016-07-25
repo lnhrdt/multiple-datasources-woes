@@ -1,6 +1,7 @@
-datasource:
+databases:
   pets:
-    url: "jdbc:h2:mem:pets"
+    datasource:
+      url: "jdbc:h2:mem:pets"
     jpa:
       properties.hibernate.hbm2ddl.auto: create-drop
   plants:

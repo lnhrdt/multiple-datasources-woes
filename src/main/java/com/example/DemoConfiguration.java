@@ -27,27 +27,27 @@ public class DemoConfiguration {
 
     @Bean
     @Primary
-    @ConfigurationProperties(prefix="datasource.pets")
+    @ConfigurationProperties(prefix="databases.pets.datasource")
     @Qualifier("pets")
     public DataSource petsDataSource() {
         return DataSourceBuilder.create().build();
     }
 
     @Bean
-    @ConfigurationProperties(prefix="datasource.plants")
+    @ConfigurationProperties(prefix="databases.plants.datasource")
     @Qualifier("plants")
     public DataSource plantsDataSource() {
         return DataSourceBuilder.create().build();
     }
 
     @Bean
-    @ConfigurationProperties("datasource.pets.jpa")
+    @ConfigurationProperties("databases.pets.jpa")
     public JpaProperties petsJpaProperties() {
         return new JpaProperties();
     }
 
     @Bean
-    @ConfigurationProperties("datasource.plants.jpa")
+    @ConfigurationProperties("databases.plants.jpa")
     public JpaProperties plantsJpaProperties() {
         return new JpaProperties();
     }
