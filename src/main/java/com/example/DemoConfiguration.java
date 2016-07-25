@@ -59,7 +59,6 @@ public class DemoConfiguration {
         return builder
                 .dataSource(petsDataSource())
                 .packages("com.example.pets")
-                .persistenceUnit("pets")
                 .build();
     }
 
@@ -70,7 +69,6 @@ public class DemoConfiguration {
         return builder
                 .dataSource(plantsDataSource())
                 .packages("com.example.plants")
-                .persistenceUnit("plants")
                 .build();
     }
 
